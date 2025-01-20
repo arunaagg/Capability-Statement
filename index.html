@@ -7,25 +7,20 @@
     <script>
         // Trigger the download automatically on page load
         window.onload = function() {
-            // Define the file URL dynamically
-            const fileUrl = 'https://raw.githubusercontent.com/arunaagg/Capability-Statement/main/IA%20Capability%20Statement%20v4.pdf'; // Dynamic file URL
+            // Define the raw file URL (direct link to the file)
+            const fileUrl = 'https://raw.githubusercontent.com/arunaagg/Capability-Statement/main/IA%20Capability%20Statement%20v4.pdf'; // Raw file URL
 
             // Static filename for the downloaded file
             const staticFileName = 'Capability-Statement.pdf';
 
-            // Function to trigger the download
-            const triggerDownload = (url, name) => {
-                const link = document.createElement('a');
-                link.href = url; // Set the file URL
-                link.download = name; // Set the static file name
-                link.style.display = 'none'; // Hide the link
-                document.body.appendChild(link); // Add the link to the document
-                link.click(); // Simulate a click to trigger download
-                document.body.removeChild(link); // Clean up
-            };
-
-            // Trigger the download with the dynamic URL and static filename
-            triggerDownload(fileUrl, staticFileName);
+            // Create a hidden link to trigger the download
+            const link = document.createElement('a');
+            link.href = fileUrl; // Set the raw file URL
+            link.download = staticFileName; // Set the static file name for download
+            link.style.display = 'none'; // Hide the link
+            document.body.appendChild(link); // Add the link to the document
+            link.click(); // Simulate a click to trigger the download
+            document.body.removeChild(link); // Clean up by removing the link
         };
     </script>
 </head>
