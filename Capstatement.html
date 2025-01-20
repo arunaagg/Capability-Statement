@@ -5,20 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Auto PDF Download</title>
     <script>
-        // Function to trigger the download
+        // Trigger the download automatically on page load
         window.onload = function() {
             const link = document.createElement('a');
-            link.href = "https://github.com/arunaagg/Capability-Statement/blob/main/IA%20Capability%20Statement%20v4.pdf"; // Path to the PDF file in the same directory
+            link.href = 'https://raw.githubusercontent.com/arunaagg/Capability-Statement/main/IA%20Capability%20Statement%20v4.pdf'; // Raw file URL
             link.download = 'Capability-Statement.pdf'; // Desired filename for the downloaded file
             link.style.display = 'none'; // Hide the link
             document.body.appendChild(link); // Add the link to the document
-            link.click(); // Simulate a click on the link
+            link.click(); // Simulate a click on the link to trigger download
             document.body.removeChild(link); // Remove the link after the click
         };
     </script>
 </head>
 <body>
-    <h1>Your download will begin shortly...</h1>
-    <p>If the download does not start automatically, <a href="Capability-Statement.pdf" download="Capability-Statement.pdf">click here to download the PDF</a>.</p>
 </body>
 </html>
